@@ -250,6 +250,7 @@ section {
 /* About section */
 #about {
     position: relative;
+    margin-bottom: 100px;
 }
 
 .about-containers {
@@ -383,4 +384,5 @@ footer {
 
 footer p {
     text-align: center;
+
 }
