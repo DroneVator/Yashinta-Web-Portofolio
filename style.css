@@ -5,6 +5,14 @@
     padding: 0;
 }
 
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+}
+
 body {
     font-family: 'Poppins', sans-serif;
 }
@@ -385,4 +393,66 @@ footer {
 footer p {
     text-align: center;
 
+}
+
+/* ===================================================
+   TAMBAHAN UI MODERN (GLASSMORPHISM & ANIMATION)
+   =================================================== */
+
+/* Efek Transparan Mewah (Glassmorphism) */
+.glass {
+    background: rgba(255, 255, 255, 0.4) !important; /* Transparansi putih */
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05); /* Bayangan halus */
+    backdrop-filter: blur(8px); /* Efek blur kaca */
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.glass:hover {
+    transform: translateY(-8px); /* Efek melayang saat kursor di atasnya */
+    background: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Animasi Halus Saat Halaman Dibuka */
+.fade-in {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+/* Optimasi Gambar Profil agar Estetik */
+.profile-img {
+    border-radius: 50%; /* Membuat gambar jadi bulat */
+    border: 8px solid white; /* Frame putih */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: 0.5s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05) rotate(2deg); /* Efek zoom tipis dan miring */
+}
+
+/* Efek Hover untuk Icon Social Media */
+.scale-hover {
+    transition: transform 0.3s ease;
+}
+
+.scale-hover:hover {
+    transform: scale(1.3); /* Icon membesar saat disentuh */
+}
+
+/* Perbaikan Footer */
+footer b {
+    color: black;
 }

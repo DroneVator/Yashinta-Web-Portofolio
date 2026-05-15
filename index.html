@@ -3,194 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portofolio</title>
+    <title>Yashinta Chindy | Legal Consultant Portofolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mediaqueries.css"> 
+    <link rel="stylesheet" href="mediaqueries.css">
 </head>
 <body>
-    <nav id="desktop-nav">
-        <div class="logo">Yashinta Chindy</div>
-        <div>
+    <header>
+        <nav id="desktop-nav">
+            <div class="logo">Yashinta Chindy</div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
+                <li><a href="#experience">Expertise</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-        </div>
-    </nav>
-    <nav id="hamburger-nav">
-        <div class="logo">Yashinta Chindy</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
+        </nav>
+        <nav id="hamburger-nav">
+            <div class="logo">Yashinta Chindy</div>
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span><span></span><span></span>
+                </div>
+                <div class="menu-links">
+                    <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                    <li><a href="#experience" onclick="toggleMenu()">Expertise</a></li>
+                    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+                </div>
             </div>
-            <div class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-            </div>
-        </div>
-    </nav>
-    <section id="profile">
+        </nav>
+    </header>
+
+    <section id="profile" class="fade-in">
         <div class="section__pic-container">
-            <img src="./assets/profil-pic.png" alt="Yashinta Chindy profile picture">
+            <img src="./assets/profil-pic.png" alt="Yashinta Chindy" class="profile-img">
         </div>
         <div class="section__text">
             <p class="section__text__p1">Hello, I'm</p>
-            <h1 class="title">Yashinta Chindy Pramesti</h1>
+            <h1 class="title">Yashinta Chindy Pramesti, S.H.</h1>
             <p class="section__text__p2">Legal Consultant</p>
             <div class="btn-container">
-                <button class="btn btn-color-2" onclick="window.open('./assets/resume-yashinta.pdf')">
-                    Download CV
-                </button>
-                 <button class="btn btn-color-1" onclick="location.href='./#contact'">
-                    Contact Info
-                </button>
+                <button class="btn btn-color-2" onclick="window.open('./assets/resume-yashinta.pdf')">Download CV</button>
+                <button class="btn btn-color-1" onclick="location.href='#contact'">Contact Info</button>
             </div>
             <div id="socials-container">
-                <img src="./assets/linkedin.png" alt="My LinkedIn profile" 
-                class="icon" onclick="location.href='https://linkedin.com/'">
-                
-                <img src="./assets/wa-icon.png" alt="My wa number" 
-                class="icon" onclick="location.href='https://wa.me/6289697094358/'"> 
+                <img src="./assets/linkedin.png" alt="LinkedIn" class="icon scale-hover" onclick="location.href='https://linkedin.com/'">
+                <img src="./assets/wa-icon.png" alt="WhatsApp" class="icon scale-hover" onclick="location.href='https://wa.me/6289697094358/'"> 
             </div>
-
         </div>
     </section>
+
     <section id="about">
         <p class="section__text__p1">Get To Know More</p>
         <h1 class="title">About Me</h1>
         <div class="section-container">
             <div class="section__pic-container">
-                <img src="./assets/about-picture.png" alt="profil picture" class="about-pic">
+                <img src="./assets/about-picture.png" alt="About Picture" class="about-pic">
             </div>
             <div class="about-details-container">
                 <div class="about-containers">
-                    <div class="details-container">
-                        <img src="./assets/experience.png" alt="Experience icon" class="icon">
+                    <div class="details-container glass">
+                        <img src="./assets/experience.png" alt="Experience" class="icon">
                         <h3>Experience</h3>
-                        <p>Fresh Graduate <br> Legal Consultant</p>
+                        <p>Fresh Graduate <br>Legal Consultant</p>
                     </div>
-                    <div class="details-container">
-                        <img src="./assets/education.png" alt="Education icon" class="icon">
+                    <div class="details-container glass">
+                        <img src="./assets/education.png" alt="Education" class="icon">
                         <h3>Education</h3>
-                        <p>S1 Sarjana Hukum Universitas Muhammadiyah Malang</p>
+                        <p>S1 Ilmu Hukum <br>Univ. Muhammadiyah Malang</p>
                     </div>
                 </div>
                 <div class="text-container">
-                    <p>Saya adalah sosok yang sangat mudah beradaptasi dengan hal dan lingkungan baru, 
-                        rasa ingin tahu saya memberikan sebuah energi semangat untuk terus belajar hal baru dalam hidup saya. 
-                        Menjujung tinggi tanggung jawab dan profesionalitas adalah prinsip hidup saya.</p>
+                    <p>Adaptif, profesional, dan memiliki rasa ingin tahu yang tinggi. Saya menjunjung tinggi tanggung jawab dalam setiap penanganan perkara hukum, baik litigasi maupun non-litigasi.</p>
                 </div>
             </div>
         </div>
-        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'">
     </section>
+
     <section id="experience">
         <p class="section__text__p1">Explore My</p>
         <h1 class="title">Expertise</h1>
         <div class="experience-details-container">
             <div class="about-containers">
-                <div class="details-container">
+                <div class="details-container glass">
                     <h2 class="experience-sub-title">Criminal Law</h2>
                     <div class="article-container">
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                            <div>
-                                <h3>Analisis Kasus</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                            <div>
-                                <h3>Litigasi</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                            <div>
-                                <h3>Non-Litigasi</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
+                        <article><img src="./assets/checkmark.png" alt="icon" class="icon"><div><h3>Analisis Kasus</h3><p>Intermediate</p></div></article>
+                        <article><img src="./assets/checkmark.png" alt="icon" class="icon"><div><h3>Litigasi</h3><p>Intermediate</p></div></article>
+                        <article><img src="./assets/checkmark.png" alt="icon" class="icon"><div><h3>Non-Litigasi</h3><p>Intermediate</p></div></article>
                     </div>
                 </div>
-                <div class="details-container">
+                <div class="details-container glass">
                     <h2 class="experience-sub-title">Civil Law</h2>
                     <div class="article-container">
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                            <div>
-                                <h3>Legal Drafting</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                            <div>
-                                <h3>Contract Drafting</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                            <div>
-                                <h3>Analisis Kasus</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                            <div>
-                                <h3>Litigasi</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                            <div>
-                                <h3>Non-Litigasi</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
+                        <article><img src="./assets/checkmark.png" alt="icon" class="icon"><div><h3>Legal Drafting</h3><p>Intermediate</p></div></article>
+                        <article><img src="./assets/checkmark.png" alt="icon" class="icon"><div><h3>Contract Drafting</h3><p>Intermediate</p></div></article>
+                        <article><img src="./assets/checkmark.png" alt="icon" class="icon"><div><h3>Analisis Perdata</h3><p>Intermediate</p></div></article>
                     </div>
                 </div>
             </div>
         </div>
-         <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contacts'">
     </section>
+
     <section id="contact">
         <p class="section__text__p1">Get in Touch</p>
         <h1 class="title">Contact Me</h1>
-        <div class="contact-info-upper-container">
+        <div class="contact-info-upper-container glass">
             <div class="contact-info-container">
-                <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon">
+                <img src="./assets/email.png" alt="Email" class="icon contact-icon">
                 <p><a href="mailto:shintachindy34@gmail.com">shintachindy34@gmail.com</a></p>
             </div>
             <div class="contact-info-container">
-                <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon">
-                <p><a href="https://linkedin.com">LinkedIn</a></p>
+                <img src="./assets/linkedin.png" alt="LinkedIn" class="icon contact-icon">
+                <p><a href="https://linkedin.com">LinkedIn Profile</a></p>
             </div>
         </div>
     </section>
+
     <footer>
-        <nav>
-            <div class="nav-links-container">
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            </div>
-        </nav>
-        <p>Copyright &#169; 2026 Yashinta Chindy Pramesti S. H. All Right Reserved. </p>
+        <p>Copyright &#169; 2026 <b>Yashinta Chindy Pramesti, S.H.</b> All Rights Reserved.</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
-
 </html>
-
