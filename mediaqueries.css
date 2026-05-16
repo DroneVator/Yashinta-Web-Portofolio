@@ -1,91 +1,112 @@
-@media screen and (max-width: 1400px) {
-    #profile {
-        height: 83vh;
-        margin-bottom: 6rem;
+/* ===================================================
+   RESPONSIVE DESIGN (MEDIA QUERIES)
+   =================================================== */
+
+/* 1. UNTUK TABLET & HP BESAR (Maksimal Lebar 1200px) */
+@media screen and (max-width: 1200px) {
+    section {
+        margin: 0 5rem; /* Mengurangi margin samping agar tidak terlalu sempit */
+        height: auto; /* Membiarkan tinggi section menyesuaikan isi */
+        min-height: fit-content;
+        padding-bottom: 5vh;
     }
-    .about-containers {
-        flex-wrap: wrap;
+    
+    .arrow {
+        display: none; /* Sembunyikan panah navigasi di layar kecil */
     }
 }
 
-@media screen and (max-width: 1200px) {
+/* 2. UNTUK HP / MOBILE (Maksimal Lebar 800px) */
+@media screen and (max-width: 800px) {
+    /* Navigasi */
     #desktop-nav {
-        display: none;
+        display: none; /* Sembunyikan nav desktop */
     }
+    
     #hamburger-nav {
-        display: flex;
+        display: flex; /* Munculkan menu hamburger */
     }
-    #experience, .experience-details-container {
-        margin-top: 2rem;
-    }
-    #profile, .section-container {
-        display: block;
-    }
-    .arrow {
-        display: none;
-    }
-    section, .section-container {
-        height: fit-content;
-    }
-    section {
-        margin: 0 5%;
-    }
-    .section__pic-container {
-        width: 275px;
-        height: 275px;
-        margin: 0 auto 2rem;
-    }
-    .about-containers {
-        margin-top: 0;
-    }
-}   
-@media screen and (max-width: 600px) {
-    #contact, footer {
-        height: 40vh;
-    }
+
+    /* Profile Section */
     #profile {
-        height: 83vh;
-        margin-bottom: 0;
+        flex-direction: column; /* Ubah layout dari samping-sampingan jadi atas-bawah */
+        height: auto;
+        gap: 2rem;
+        padding-top: 5vh;
     }
-    article {
-        font-size: 1rem;
-    }
-    footer nav {
-        height: fit-content;
-        margin-bottom: 2rem;
-    }
-    .about-containers, .contact-info-uppercase-container, .btn-container {
-        flex-wrap: wrap;
-    }
-    .contact-info-container {
-        margin: 0;
-    }
-    .contact-info-container p, .nav-links li a {
-        font-size: 1rem;
-    }
-    .experience-sub-title {
-        font-size: 1.25rem;
-    }
-    .logo {
-        font-size: 1.5rem;
-    }
-    .nav-links {
-        flex-direction: column;
-        gap: 0.5rem;
-        text-align: center
-    }
+
     .section__pic-container {
-        width: auto;
-        height: 46vw;
-        justify-content: center;
-    } 
+        width: 250px; /* Perkecil ukuran foto profil di HP */
+        height: 250px;
+        margin: 0 auto;
+    }
+
+    .title {
+        font-size: 2rem; /* Perkecil ukuran font judul */
+    }
+
     .section__text__p2 {
         font-size: 1.25rem;
-    }  
-    .title {
-        font-size: 2rem;
     }
-    .text-container {
-        text-align: justify;
+
+    /* About Section */
+    .section-container {
+        flex-direction: column; /* Ubah layout About jadi vertikal */
+        gap: 2rem;
+    }
+
+    .about-pic {
+        width: 250px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .about-containers {
+        flex-direction: column; /* Kotak Experience & Education jadi atas-bawah */
+        gap: 1rem;
+    }
+
+    /* Expertise Section */
+    .experience-details-container .about-containers {
+        flex-direction: column;
+    }
+
+    .article-container {
+        gap: 1.5rem;
+        justify-content: center;
+    }
+
+    article {
+        width: 100%; /* Isi keahlian memanjang penuh */
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+
+    /* Contact Section */
+    .contact-info-upper-container {
+        flex-direction: column; /* Email dan LinkedIn jadi atas-bawah */
+        gap: 1rem;
+        align-items: flex-start;
+        padding: 1.5rem;
+    }
+
+    .contact-info-container p {
+        font-size: 1rem;
+    }
+}
+
+/* 3. UNTUK HP KECIL (Maksimal Lebar 480px) */
+@media screen and (max-width: 480px) {
+    section {
+        margin: 0 1.5rem; /* Margin sangat tipis untuk HP kecil */
+    }
+
+    .btn-container {
+        flex-direction: column; /* Tombol CV dan Contact jadi atas-bawah */
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%; /* Tombol memenuhi lebar layar */
     }
 }
